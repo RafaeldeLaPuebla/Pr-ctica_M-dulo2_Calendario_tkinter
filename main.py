@@ -23,19 +23,36 @@ class Header (ttk.Frame):
         s = ttk.Style()
         s.configure('my.Botton', width = 51, height = 30, font=('Arial', 24))
         
-        self.__btnLastYear = ttk.Button (self, text="<<", style ='my.Botton', command=self._lastYear)
-        self.__btnLastMonth = ttk.Button (self, text="<", style ='my.Botton', command=self._lastMonth)
-        self.__btnNextMonth = ttk.Button (self, text=">", style ='my.Botton', command=self._nextMonth)
-        self.__btnNextYear = ttk.Button (self, text=">>", style ='my.Botton', command=self._nextYear)
+        self.__btnLastYear = ttk.Button (self, text="<<", style ='my.Botton')
+        self.__btnLastYear.place(x=24, y=5)
+        self.__btnLastMonth = ttk.Button (self, text="<", style ='my.Botton')
+        self.__btnLastMonth.place(x=83, y=5)
+        self.__btnNextMonth = ttk.Button (self, text=">", style ='my.Botton')
+        self.__btnNextMown.place(x=398, y=5)
+        self.__btnNextYear = ttk.Button (self, text=">>", style ='my.Botton')
+        self.__btnNextYear.place(x=457, y=5)
         
-        
+'''        
 class Calendar (ttk.Frame):
     
     def __init__(self, parent, **args):
         self.header = Header ()
         self.daysName = DaysName()
+        self.month = Month ()
+        self.activeYear
+        self.activeMonth
         
-
+    def backMonth ():
+        
+        
+    def backYear ():
+        
+    
+    def advMonth ():
+        
+    def advYear ():
+        
+'''
 
 class DaysName (ttk.Frame):
 
@@ -60,7 +77,8 @@ class DaysName (ttk.Frame):
         self.__lblSabado.place(x=380, y=38)
         self.__lblDomingo = ttk.Label(self, text="Domingo", style = 'my.DayName')
         self.__lblDomingo.place(x=456, y=38)
-        
+
+'''
 class Month (ttk.Frame):
     
     def __init__(self, parent, **args):
@@ -83,7 +101,7 @@ class Date(ttk.Frame):
     def setActive ():
         
     
-    
+'''
 
 class MainApp (Tk):
     def __init__(self):
